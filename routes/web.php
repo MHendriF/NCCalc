@@ -19,15 +19,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-route::post('sentKritik', 'AdminController@simpan_kritik');
-
 Route::group(['middleware' => 'authenticate'], function() {
 	Route::resource('item', 'ItemController');
 	Route::post('item/{id}', 'ItemController@update');
 	Route::get('saran', 'AdminController@kritik_saran');	
 });
 
+
+Route::get('/home', 'HomeController@index');
+Route::post('sentKritik', 'AdminController@simpan_kritik');
 Route::get('/findPrice', 'CalculatorController@findPrice');
 // Route::get('/findPrice', array('as'=>'findPrice','uses'=>'CalculatorController@findPrice'));
 //Route::post('search', 'SearchController@search');

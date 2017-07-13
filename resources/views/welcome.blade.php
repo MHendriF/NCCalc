@@ -79,7 +79,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Anti Hoax Website</div>
+                <div class="intro-lead-in">Welcome To Net Centric Computing Laboratory</div>
                 <div class="intro-heading">Let's broke the Hoax!</div>
             </div>
         </div>
@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">NCC Service</h2>
-                    <h3 class="section-subheading text-muted">"We have some Hoax around You!"</h3>
+                    <h3 class="section-subheading text-muted">"We have some service around You!"</h3>
                 </div>
             </div>
             <div class="row">
@@ -144,7 +144,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">NCC Calculator</h2>
-                    <h3 class="section-subheading text-muted">"An Amazing 6 steps to make your life easier!"</h3>
+                    <h3 class="section-subheading text-muted">"An Amazing calculator to calculate your purchase easier!"</h3>
                 </div>
             </div>
             <div class="panel panel-footer">
@@ -202,7 +202,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Kritik & Saran</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Write down your criticism or suggestion to help us better.</h3>
                 </div>
             </div>
             <div class="row">
@@ -233,7 +233,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">NCCalc - Copyright &copy; {{date('Y')}} by <strong><a href="http://www.facebook.com/m.hendri.fe">MHF</a></strong> </span>
+                    <span class="copyright"><strong>NCCalc V2.0</strong> - Copyright &copy; {{date('Y')}} by <strong><a href="http://www.facebook.com/m.hendri.fe">MHF</a></strong> </span>
                 </div>
                 <div class="col-md-4">
                     
@@ -478,6 +478,20 @@
             }
         });
     </script>
+
+    <!-- PNotify -->
+    <script>
+      $(document).ready(function() {
+          @if(Session::has('suggestion'))
+            swal({
+              title: "Thank You!",
+              text: "{{ Session::get('suggestion') }}",
+              imageUrl: "frontend/img/thumbs-up.jpg"
+            });
+          @endif
+        });
+    </script>
+    <!-- /PNotify -->
 
 </body>
 

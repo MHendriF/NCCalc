@@ -26,7 +26,7 @@ class AdminController extends Controller
 
         Pesan::create($request->all());
 
-        Session::flash('new', 'New website was successfully added!');
+        Session::flash('suggestion', 'Semoga Lab NCC Lebih Baik Kedepannya');
         return redirect('/');
     }
 
