@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-@section('htmlheader_title', 'History Pencarian')
+@section('htmlheader_title', 'Kritik & Saran')
     @include('backend.layouts.includes.htmlheader')
 @show
 
@@ -17,8 +17,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-    @section('contentheader_title', 'Search History')
-    @section('contentheader_message', 'Search History')
+    @section('contentheader_title', 'Kritik & Saran')
+    @section('contentheader_message', 'Kritik & Saran')
         @include('backend.layouts.partials.contentheader')
         
         <!-- Main content -->
@@ -31,7 +31,7 @@
             <div class="col-xs-12">
               <div class="box box-warning">
                 <div class="box-header">
-                  <h3 class="box-title">Search History</h3>
+                  <h3 class="box-title">Kritik & Saran</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -39,30 +39,14 @@
                     <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Keyword Search</th>
-                      <th>News Category</th>
-                      <th>Valid</th>
-                      <th>Hoax</th>
-                      <th>Unknown</th>
-                      <th>Action</th>
+                      <th>Isi Pesan</th>
                     </tr>
                     </thead>
                     <tbody>
-                      @foreach($data as $index => $history)       
+                      @foreach($data as $index => $pesan)       
                       <tr>
                         <td>{{ $index +1 }}</td>
-                        <td>{{ $history->keyword }}</td>
-                        <td>{{ $history->category }}</td>
-                        <td>{{ $history->valid }} %</td>
-                        <td>{{ $history->hoax }} %</td>
-                        <td>{{ $history->unknown }} %</td>
-                        <td>
-                          <center>
-                            <div class="btn-group">
-                              <a href="{{ url('history/'.$history->id.'/edit') }}" class="btn btn-success btn-xs"><i class="fa fa-pencil" style="margin-right: 6px;"></i>Edit</a>
-                            </div>
-                          </center>
-                          </td>
+                        <td>{{ $pesan->isi_pesan }}</td>
                       </tr>
                       @endforeach
                     </tbody>

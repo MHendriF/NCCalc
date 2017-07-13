@@ -28,7 +28,7 @@
                     <li><a href="{{ url('item') }}"><i class="fa fa-list"></i>List Item</a></li>
                 </ul>
             </li>
-            <li><a href="{{ url('history') }}"><i class="fa fa-history"></i> <span>History</span></a></li>
+            <li><a href="{{ url('saran') }}"><i class="fa fa-history"></i> <span>Kritik & Saran</span></a></li>
           </ul>
 
     </section>

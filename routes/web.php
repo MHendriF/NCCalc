@@ -20,18 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-route::resource('website', 'AdminController');
-route::post('website/{id}', 'AdminController@update');
-route::resource('news', 'NewsController');
+route::post('sentKritik', 'AdminController@simpan_kritik');
 
-Route::resource('history', 'HistoryController');
-Route::post('history/{id}', 'HistoryController@update');
-
-Route::resource('item', 'ItemController');
-Route::post('item/{id}', 'ItemController@update');	
-
-Route::get('result', 'HoaxDetectorController@result');
-Route::get('search', 'SearchController@search');
+Route::group(['middleware' => 'authenticate'], function() {
+	Route::resource('item', 'ItemController');
+	Route::post('item/{id}', 'ItemController@update');
+	Route::get('saran', 'AdminController@kritik_saran');	
+});
 
 Route::get('/findPrice', 'CalculatorController@findPrice');
 // Route::get('/findPrice', array('as'=>'findPrice','uses'=>'CalculatorController@findPrice'));

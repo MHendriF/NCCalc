@@ -66,7 +66,7 @@
                         <a class="page-scroll" href="#detect">NCC Calcuator</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Price List</a>
+                        <a class="page-scroll" href="#contact">Kritik & Saran</a>
                     </li>
                 </ul>
             </div>
@@ -196,55 +196,44 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="bg-light-gray">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Price List</h2>
-                    <h3 class="section-subheading text-muted">"We are called to focus on you!"</h3>
+                    <h2 class="section-heading">Kritik & Saran</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
-                  <div class="box box-warning">
-                    <!-- /.box-header -->
-                    {{-- <div class="box-body">
-                      <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Nama Item</th>
-                          <th>Harga</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                          @foreach($data as $index => $item)       
-                          <tr>
-                            <td>{{ $index +1 }}</td>
-                            <td>{{ $item->nama_item }}</td>
-                            <td>Rp {{ $item->harga }}</td>
-                          </tr>
-                          @endforeach
-
-                        </tbody>
-                      </table>
-                    </div> --}}
-                    <!-- /.box-body -->
-                  </div>
-                  <!-- /.box -->
+                <div class="col-lg-12">
+                    <form action="{{ url('sentKritik') }}" method="post" novalidate>
+                        {{ csrf_field() }}
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" id="message" name="isi_pesan" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <!-- /.col -->
             </div>
-
         </div>
     </section>
+
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">NCCalc - Copyright &copy; {{date('Y')}} by <strong>MHF</strong> </span>
+                    <span class="copyright">NCCalc - Copyright &copy; {{date('Y')}} by <strong><a href="http://www.facebook.com/m.hendri.fe">MHF</a></strong> </span>
                 </div>
                 <div class="col-md-4">
                     
@@ -253,9 +242,9 @@
                     <ul class="list-inline social-buttons">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="http://www.facebook.com/m.hendri.fe"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="https://www.linkedin.com/in/m-hendri-febriansyah"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -378,7 +367,7 @@
     <script src="{{ asset('/frontend/js/sweetalert/dist/sweetalert.min.js') }}" type="text/javascript"></script>
     <!-- Theme JavaScript -->
     <script src="{{ asset('/frontend/js/agency.js') }}"></script>
-    <script {{-- data-pace-options='{ "ghostTime": 3000 }' --}} src="{{ asset('/frontend/js/pace.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/pace.min.js') }}"></script>
     <!-- page script -->
 
     <script>

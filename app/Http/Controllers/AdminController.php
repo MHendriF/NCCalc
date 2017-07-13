@@ -4,57 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Website;
-use App\History;
+use App\Pesan;
+
 use Session;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        $data = Website::all();
-        return view('backend.admin.website.website', compact('data'));
     }
-
 
     public function create()
     {
-        return view('backend.admin.website.add_website');
     }
 
-    public function store(Request $request)
+    public function simpan_kritik(Request $request)
     {
        $this->validate($request, array(
-            'address'     => 'required|max:100',
-            'type'   => 'required'
+            'isi_pesan'   => 'required'
             ));
 
-        Website::create($request->all());
+        Pesan::create($request->all());
 
         Session::flash('new', 'New website was successfully added!');
-        return redirect('website');
+        return redirect('/');
     }
 
- 	public function show($id)
+    public function kritik_saran()
     {
-        
-    }
-
-    public function edit($id)
-    {
-    }
-
-    
-    public function update(Request $request, $id)
-    {
-        Website::find($id)->update($request->all());
-        Session::flash('update', 'Website was successfully updated!');
-        return redirect('website');
-    }
-
-    
-    public function destroy($id)
-    {
-        
+        $data = Pesan::all();
+        return view('backend.admin.kritik_saran', compact('data'));
     }
 }
