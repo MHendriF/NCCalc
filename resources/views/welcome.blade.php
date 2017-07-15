@@ -443,7 +443,7 @@
                             '<select class="form-control item" name="item[]">'+
                                 '<option value="0" selected="true" disabled="true">Pilih Item</option>'+
                                 '@foreach($data as $key => $item)'+
-                                '<option value="{!!$key!!}">{!!$item->nama_item!!}</option>'+
+                                '<option value="{!!$key+1!!}">{!!$item->nama_item!!}</option>'+
                                 '@endforeach'+
                             '</select>'+
                         '</td>'+
