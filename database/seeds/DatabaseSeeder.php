@@ -11,11 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //factory(App\Website::class, 50)->create();
-        //$this->command->info("Website table seeded is completed :)");
-
+        $this->call('UserSeeder');
+        //this message shown in your terminal after running db:seed command
+        $this->command->info("User database is completed :)");
         $this->call('ItemSeeder');
         //this message shown in your terminal after running db:seed command
-        $this->command->info("Item dummy is completed :)");
+        $this->command->info("Item database is completed :)");
     }
 }

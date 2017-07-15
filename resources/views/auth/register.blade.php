@@ -28,23 +28,23 @@
             <form action="{{ url('register') }}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="Fullname" name="name" value="{{ old('name') }}"/>
+                    <input type="text" class="form-control" placeholder="Fullname" name="name" value="{{ old('name') }}" disabled/>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}"/>
+                    <input type="text" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}" disabled/>
                     <span class="fa fa-user-secret form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}"/>
+                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}" disabled/>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="Password" name="password"/>
+                    <input type="password" class="form-control" placeholder="Password" name="password" disabled/>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="Retype password" name="password_confirmation"/>
+                    <input type="password" class="form-control" placeholder="Retype password" name="password_confirmation" disabled/>
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                 </div>
                 <div class="row">
@@ -52,7 +52,7 @@
                         <label>
                             <div class="checkbox_register icheck">
                                 <label>
-                                    <input type="checkbox" name="terms">
+                                    <input type="checkbox" name="terms" disabled>
                                 </label>
                             </div>
                         </label>
@@ -63,7 +63,7 @@
                         </div>
                     </div><!-- /.col -->
                     <div class="col-xs-4 col-xs-push-1">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat" disabled>Register</button>
                     </div><!-- /.col -->
                 </div>
             </form>

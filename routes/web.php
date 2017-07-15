@@ -25,7 +25,6 @@ Route::group(['middleware' => 'authenticate'], function() {
 	Route::get('saran', 'AdminController@kritik_saran');	
 });
 
-
 Route::get('/home', 'HomeController@index');
 Route::post('sentKritik', 'AdminController@simpan_kritik');
 Route::get('/findPrice', 'CalculatorController@findPrice');

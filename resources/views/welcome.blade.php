@@ -63,7 +63,7 @@
                         <a class="page-scroll" href="#portfolio">NCC Service</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#detect">NCC Calcuator</a>
+                        <a class="page-scroll" href="#calculator">NCC Calcuator</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Kritik & Saran</a>
@@ -79,8 +79,8 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Net Centric Computing Laboratory</div>
-                <div class="intro-heading">Let's broke the Hoax!</div>
+                <div class="intro-lead-in">Welcome To NCCalc</div>
+                <div class="intro-heading">Let's calculate more easier!</div>
             </div>
         </div>
     </header>
@@ -102,7 +102,7 @@
                                 <i class="fa fa-search fa-3x"></i>
                             </div>
                         </div>
-                        <img src="frontend/img/portfolio/populer.png" class="img-responsive" alt="">
+                        <img src="frontend/img/portfolio/atk.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Alat Tulis Kantor</h4>
@@ -115,7 +115,7 @@
                                 <i class="fa fa-search fa-3x"></i>
                             </div>
                         </div>
-                        <img src="frontend/img/portfolio/belgia.png" class="img-responsive" alt="">
+                        <img src="frontend/img/portfolio/printer.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Print, Scan dan Jilid</h4>
@@ -128,7 +128,7 @@
                                 <i class="fa fa-search fa-3x"></i>
                             </div>
                         </div>
-                        <img src="frontend/img/portfolio/pohon.png" class="img-responsive" alt="">
+                        <img src="frontend/img/portfolio/snack.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Coffe and Snack</h4>
@@ -139,7 +139,7 @@
     </section>
     
     <!-- Services Section -->
-    <section id="detect">
+    <section id="calculator">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -167,7 +167,7 @@
                                                 <select class="form-control item" name="item[]">
                                                     <option value="0" selected="true" disabled="true">Pilih Item</option>
                                                     @foreach($data as $key => $item)
-                                                    <option value="{!!$key!!}">{!!$item->nama_item!!}</option>
+                                                    <option value="{!!$key+1!!}">{!!$item->nama_item!!}</option>
                                                     @endforeach
                                                 </select>
                                             </td>
@@ -269,16 +269,11 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Buku populer yang tidak pernah ada</h2>
+                                <h2>Alat Tulis Kantor</h2>
                                 <p class="item-intro text-muted"></p>
-                                <img class="img-responsive img-centered" src="frontend/img/portfolio/populer.png" alt="">
-                                <p style="text-align: left;">Pada tahun 1950-an, seorang penyiar acara radio tengah malam, Jean Shepherd, menggagas sebuah ide gila untuk membuat sebuah novel, yang tidak pernah ada di dunia ini.
-                                Ide itu timbul di benaknya, setelah dia mengunjungi sebuah toko buku di daerah tempat dia tinggal. Di sana dia menyadari, orang-orang yang bergulat dalam bisnis penerbitan, akan mengikuti ke manapun arah popularitas membawa mereka.
+                                <img class="img-responsive img-centered" src="frontend/img/portfolio/atk.png" alt="">
+                                <p style="text-align: left;"><strong>Laboratorium NCC</strong> menjual keperluan alat-alat tulis kantor seperti folio bergaris, amplop, stofmap folio dan masih banyak lagi yang lainnya.
                                 </p>
-                                <p style="text-align: left;">Jean pun kemudian memutuskan untuk membicarakan sebuah buku yang sangat laris, tapi tak pernah dibuat dan dipublikasikan.
-                                <strong>Penyiar radio</strong> itu lalu memutuskan untuk memberi judul 'karangannya', I, Libertine, karya penulis Frederick Ewing. Pendengar setia acara radionya pun mulai heboh membicarakan buku tersebut, dan mulai mencari-cari karya fenomenal itu.
-                                </p>
-                                <p style="text-align: left;">Jean kemudian bekerjasama dengan seorang kenalannya di media, mengatakan bahwa mereka telah mewawancarai penulis novel tersebut.Saat berita yang menyebutkan bahwa novel tersebut hoax, kepala perusahaan penerbitan Ballantine Books, menghubungi Jean dan seorang penulis, Theodore Strugeon, untuk menciptakan novel I, Libertine. Jean membuat alur cerita buku tersebut dan Theodore menjadi penulis utamanya.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
@@ -302,11 +297,10 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <h2>Belgia Pecah Jadi 2</h2>
+                                <h2>Print, Scan dan Jilid</h2>
                                 <p class="item-intro text-muted"></p>
-                                <img class="img-responsive img-centered" src="frontend/img/portfolio/belgia.png" alt="">
-                                <p style="text-align: left;">Pada tahun 2006, warga Belgia dikejutkan dengan berita hoax yang disampaikan oleh media setempat, bahwa negara mereka telah terbelah menjadi dua bagian.Media lokal tersebut menyiarkan dalam sebuah 'siaran langsung', sebagian wilayah Belgia yang berbahasa Belanda, telah mendeklarasikan kemerdekaan.</p>
-                                <p style="text-align: left;">Laporan langsung itu menunjukkan kerumunan warga mengibarkan bendera Flemish dan bergerak menuju bandara Brussels. Menurut laporan, media tersebut menyebarkan berita hoax itu untuk memperlihatkan kepada penonton, hal itu bisa saja terjadi di masa depan.</p>
+                                <img class="img-responsive img-centered" src="frontend/img/portfolio/printer.png" alt="">
+                                <p style="text-align: left;">Salah satu layanan yang disediakan di <strong>Laboratorium NCC</strong> adalah print, scan dan jilid. Ketiga layanan ini bertujuan untuk memudahkan Mahasiswa Teknik Informatika dalam mengurus kebutuhan akademiknya. Selain itu harga yang ditawarkan sangat terjangkau bagi mahasiswa.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
@@ -331,11 +325,10 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Pohon spageti </h2>
+                                <h2>Coffe and Snack </h2>
                                 <p class="item-intro text-muted"></p>
-                                <img class="img-responsive img-centered" src="frontend/img/portfolio/pohon.png" alt="">
-                                <p style="text-align: left;">Pada 1 April 1957, seorang wartawan Eropa mengklarifikasi berita mengenai 'pohon spageti' adalah hoax. Berita mengenai sebuah keluarga di selatan Swiss menumbuhkan mi di ladang mereka, awalnya di siarkan dalam sebuah program acara milik BBC, Panorama.</p>
-                                <p style="text-align: left;">Setelah kemunculan berita tersebut, ribuan orang menghubungi media tersebut, bertanya bagaimana caranya menanam spageti di kebun.Pada masa itu, spageti belum begitu terkenal di Inggris. Sehingga tidak banyak yang menyadari, mi itu terbuat dari tepung dan air.</p>
+                                <img class="img-responsive img-centered" src="frontend/img/portfolio/snack.png" alt="">
+                                <p style="text-align: left;">Tujuan utama layanan ini adalah untuk memfasilitasi kebutuhan user TA terhadap makanan. Sehingga user TA dapat fokus unutk mengerjakan TAnya tanpa harus keluar untuk membeli makanan</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
